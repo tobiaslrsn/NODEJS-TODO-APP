@@ -1,0 +1,33 @@
+<ul>
+  <h3>DONE TASKS</h3>
+
+  {{#each todos}}
+
+    {{#if done}}
+      <div class="start-page-wrapper">
+        <div class="add-todo-container">
+          <h3>Todo details</h3>
+          <div class="todo-single-information">
+            <h5>Posted on: </h5>
+            <li>{{created}}</li>
+            <h5>What todo:</h5>
+            <li>{{description}}</li>
+            {{#if done}}
+              <h4 class="status-checked">STATUS: CHECKED</h4>
+            {{else}}
+              <h4 class="status-unchecked">STATUS: UNCHECKED</h4>{{/if}}
+
+          </div>
+
+          <div class="todo-options">
+            <a href="/todos/{{id}}/delete-todo">
+              <h4>DELETE</h4>
+              <h4><a href="/todos/{{id}}/">EDIT</a></h4>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    {{/if}}
+  {{/each}}
+</ul>

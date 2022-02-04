@@ -1,0 +1,59 @@
+<div class="start-page-wrapper">
+  <div class="add-todo-container">
+    <form action="/todos/" method="post">
+      <h3>ADD TODO</h3>
+      <textarea
+        name="description"
+        placeholder="What'cha wanna do?"
+        class="add-todo-textarea"
+      ></textarea>
+      <input type="submit" value="ADD TODO" class="add-todo-submit" />
+    </form>
+  </div>
+
+  <ul class="todo-ul">
+    {{! TODO LIST }}
+    {{#each todos}}
+      <div class="each-todo">
+        {{#if done}}
+          <div class="done-todo-container">
+            <a href="/todos/{{id}}">
+              <h5>Posted on: </h5>
+              <li>{{created}}</li>
+              <h5>What todo:</h5>
+              <li>{{description}}</li>
+            </a>
+
+            <div class="icon-container">
+              <a href="/todos/{{id}}/done">
+                <i class="far fa-dot-circle"></i>
+              </a>
+
+              <a href="/todos/{{id}}/delete-todo">
+                <i class="fas fa-times-circle"></i>
+              </a>
+
+            </div>
+          </div>
+
+        {{else}}
+          <div class="undone-todo-container">
+            <a href="/todos/{{id}}">
+              <h5>Posted on: </h5>
+              <li>{{created}}</li>
+              <h5>What todo:</h5>
+              <li>{{description}}</li>
+            </a>
+            <div class="icon-container">
+              <a href="/todos/{{id}}/done">
+                <i class="far fa-circle"></i>
+              </a>
+              <a href="/todos/{{id}}/delete-todo">
+                <i class="fas fa-times-circle"></i>
+              </a></div>
+          </div>
+        {{/if}}
+      </div>
+    {{/each}}
+  </ul>
+</div>

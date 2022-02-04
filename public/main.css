@@ -1,0 +1,197 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 2rem;
+  gap: 10px;
+}
+
+.header-links {
+  border: 2px solid black;
+
+  padding: 0.2rem;
+}
+
+h3 {
+  text-align: center;
+}
+
+h5 {
+  margin-top: 0.6rem;
+}
+
+.todo-single-information > h5 {
+  margin-bottom: 0.7rem;
+}
+
+.todo-single-information > li {
+  list-style: none;
+}
+
+.start-page-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+}
+
+a:hover {
+  color: gray;
+}
+
+.add-todo-container {
+  margin: 3rem;
+}
+
+.add-todo-textarea {
+  display: flex;
+  flex-direction: column;
+  resize: none;
+  width: 15rem;
+  height: 15rem;
+}
+
+.add-todo-textarea::placeholder {
+  color: darkgray;
+  font-size: 1.3rem;
+}
+
+.form-delete-todo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.add-todo-submit {
+  width: 100%;
+  height: 50px;
+  margin-top: 1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.delete-todo-submit {
+  width: 15rem;
+  height: 50px;
+  margin-top: 1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.add-todo-submit:hover {
+  background-color: gray;
+}
+
+.linethrough-done {
+}
+
+.done-todo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: line-through;
+}
+
+.done-todo-container > a {
+  color: lightgray;
+}
+
+.undone-todo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.fa-dot-circle,
+.fa-times-circle,
+.fa-circle {
+  margin-left: 1rem;
+  font-size: 1.8rem;
+  color: black;
+}
+
+.fa-circle {
+  color: rgb(255, 238, 0);
+}
+
+.fa-dot-circle {
+  color: green;
+}
+
+.fa-times-circle {
+  color: red;
+}
+
+.todo-ul {
+  margin: 3rem;
+}
+
+li {
+  width: 15rem;
+  margin-bottom: 0.7rem;
+}
+
+.icon-container {
+  display: flex;
+  text-align: right;
+  width: 4rem;
+}
+
+.each-todo {
+  display: flex;
+  margin-top: 1rem;
+  list-style: none;
+}
+
+.todo-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 25%;
+}
+
+.return {
+  position: fixed;
+  right: 5rem;
+  top: 10rem;
+}
+
+.status-checked {
+  color: green;
+  margin-bottom: 2rem;
+}
+
+.status-unchecked {
+  color: red;
+  margin-bottom: 2rem;
+}
+
+.delete-todo {
+  border: none;
+  outline: none;
+}
+
+.single-todo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 5rem;
+  gap: 2rem;
+}
